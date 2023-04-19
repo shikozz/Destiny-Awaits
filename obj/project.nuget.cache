@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "xMlYxhIxSAT5Mby5+DC8AiCKzjHvXgHadKmgc4kX6JiRVk8qPPO0HEUgt383USklWU9zGbASeLcnYiYGTDcnFA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alexc\\OneDrive\\Документы\\My Games\\Terraria\\tModLoader\\ModSources\\DestinyAwaits\\DestinyAwaits.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alexc\\.nuget\\packages\\tmodloader.codeassist\\0.1.5\\tmodloader.codeassist.0.1.5.nupkg.sha512"
+  ],
+  "logs": []
+}
