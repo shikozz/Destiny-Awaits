@@ -13,6 +13,7 @@ using DestinyAwaits.Projectiles;
 using Inquisitors;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.Graphics.Shaders;
+using DestinyAwaits.Buffs;
 
 namespace DestinyAwaits.Items.Weapons
 {
@@ -25,14 +26,15 @@ namespace DestinyAwaits.Items.Weapons
                 "\nDo not be revolted." +
                 "\nThere are parasites that may benefit the host..." +
                 "\nteeth sharper than your own.");
-
+            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(10, 5));
+            ItemID.Sets.AnimatesAsSoul[Item.type] = true;
         }
         public override void SetDefaults()
         {
             Item.damage = 1000;
             Item.width = 112;
             Item.height = 23;
-            Item.autoReuse = false;
+            Item.autoReuse = true;
             Item.DamageType = DamageClass.Ranged;
             Item.knockBack = 4f;
             Item.noMelee= true;
@@ -40,9 +42,10 @@ namespace DestinyAwaits.Items.Weapons
             Item.shootSpeed = 100f;
             Item.useAnimation = 45;
             Item.useTime = 45;
-            Item.UseSound = new Terraria.Audio.SoundStyle($"{nameof(DestinyAwaits)}/Sounds/WhisperShootSound") {
+            Item.UseSound = new Terraria.Audio.SoundStyle($"{nameof(DestinyAwaits)}/Sounds/WhisperShootSound")
+            {
                 PitchVariance = 0.2f,
-                MaxInstances=0,
+                MaxInstances = 0,
             };
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.value = Item.buyPrice(platinum: 2);
@@ -74,7 +77,7 @@ namespace DestinyAwaits.Items.Weapons
         {
             if(player.GetModPlayer<GlobalPlayer>().WhisperShoot)
             {
-               
+
             }
             return true;
         }

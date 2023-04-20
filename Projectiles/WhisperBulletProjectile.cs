@@ -44,6 +44,8 @@ namespace DestinyAwaits.Projectiles
             Player player = Main.player[Projectile.owner];
             GlobalPlayer ModPlayer = player.GetModPlayer<GlobalPlayer>();
             ModPlayer.WhisperShoot= false;
+            ModPlayer.HitCounts = 0;
+            ModPlayer.WhisperBool= false;
         }
 
         public override bool PreDraw(ref Color lightColor)

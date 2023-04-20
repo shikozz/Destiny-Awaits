@@ -66,7 +66,7 @@ namespace DestinyAwaits.Projectiles
             if(ModPlayer.HitCounts==3)
             {
                 ModPlayer.WhisperShoot = true;
-                ModPlayer.HitCounts = 0;
+                ModPlayer.WhisperBool= true;
             }
             //Main.NewText(ModPlayer.HitCounts.ToString()+" Hits registered", 255, 0, 0);
         }
